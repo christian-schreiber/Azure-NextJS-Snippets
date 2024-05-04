@@ -4,7 +4,7 @@ import { useState } from 'react';
 import styles from "./logicappcard.module.css";
 import Image from 'next/image';
 
-const API_URL =  process.env.NEXTAUTH_URL + "/api/logicapp";
+const API_URL = "http://localhost:3000/api/logicapp";
 
 const Logicappcard = () => {
     const [result, setResult] = useState(null);

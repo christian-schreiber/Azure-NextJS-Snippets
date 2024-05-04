@@ -21,7 +21,7 @@ export default async function Home() {
           </Link>
           </>
         ) :
-        <Link href={`${process.env.NEXTAUTH_URL}/api/auth/signin`}>
+        <Link href="http://localhost:3000/api/auth/signin">
             <button className={styles.button}>Login</button>
         </Link>
       }     

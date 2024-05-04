@@ -26,7 +26,7 @@ const Dropzone = () => {
             formData.append("file", file);
         });
 
-        const uploadurl =  process.env.NEXTAUTH_URL + "/api/upload";
+        const uploadurl =  "http://localhost:3000/api/upload";
 
         fetch(uploadurl, {
             method: 'PUT',

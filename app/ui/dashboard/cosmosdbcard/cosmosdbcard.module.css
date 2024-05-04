@@ -1,0 +1,72 @@
+.wrapper {
+    margin: 20px;
+    text-align: center;
+}
+
+.boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    position: relative;
+    width: 525px;
+    height: 300px;
+    margin-bottom: 60px;
+    margin-top:20px;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+    filter: blur(10px);
+    opacity: 0.75;
+}
+
+.box span {
+    position: absolute;
+    inset: 1px;
+    background: var(--color-surface-200);
+    border-radius: 20px;
+    z-index: 1;
+    padding:20px;
+}
+
+.box span:hover {
+    background-color: var(--color-surface-300);
+    cursor: pointer;
+}
+
+.boximage {
+    margin-top: 20px;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+
+    }
+    100% {
+        --a: 360deg;        
+    }
+}

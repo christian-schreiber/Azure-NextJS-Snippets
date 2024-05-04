@@ -1,4 +1,5 @@
 import styles from "../ui/dashboard/dashboard.module.css";
+import Cosmosdbcard from "../ui/dashboard/cosmosdbcard/cosmosdbcard";
 
 const Dashboard = () => { 
 
@@ -8,7 +9,7 @@ const Dashboard = () => {
     <div className={styles.wrapper}>
         <div className={styles.main}>
             <h1>Azure NextJS Snippets</h1>
-            
+            <Cosmosdbcard />
         </div>        
     </div>
   );
