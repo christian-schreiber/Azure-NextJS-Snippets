@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "plugin:@next/next/recommended"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
