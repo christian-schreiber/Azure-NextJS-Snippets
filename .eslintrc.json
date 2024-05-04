@@ -1,3 +1,17 @@
 {
-  "extends": ["next/babel","next/core-web-vitals"]
+  "extends": [
+    "plugin:prettier/recommended",
+    "react-app"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "**.json"
+  ]
 }

@@ -33,6 +33,6 @@
     "eslint-config-prettier": "^9.1.0"
   },
   "engines": {
-    "node": "18.2.0"
+    "node": "20.12.2"
   }
 }
