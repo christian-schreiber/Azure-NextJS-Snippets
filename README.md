@@ -5,7 +5,10 @@ $SubscriptionID = "Your Tenant ID"
 $Location = "germanywestcentral"
 $ResourceGroup = "Azure-NextJS-Snippets"
 $WebAppName = "Azure-NextJS-Snippets-App"
+$B1ServicePlan = "AzureNextJSSnippetsBasicPlan"
 ```
+
+Pricing [App Service – „Basic“-Plan]([https://pages.github.com/](https://azure.microsoft.com/de-de/pricing/details/app-service/windows/))
 
 ## Login to Azure CLI
 
