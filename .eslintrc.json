@@ -1,4 +1,8 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
   "extends": [
     "plugin:@next/next/recommended"
   ],
