@@ -1,0 +1,33 @@
+.dropzonecard {
+    width: 500px;
+    height: 200px;
+    background-color: var(--color-surface-300);
+    color: var(--color-text-100);
+    border-radius: 10px;
+    display: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:20px;
+}
+
+.dropzoneicon {
+    padding-top:20px;
+    font-size: 50px;
+    color: var(--color-text-100);
+}
+
+.dropzonebutton {
+    padding: 20px;
+    width: max-content;
+    margin: auto;
+}
+
+.dropzonecard:hover {
+    background-color: #555;
+}
+
+.wrapper {
+    margin: 20px;
+    text-align: center;
+  }

@@ -1,0 +1,50 @@
+.card {
+    width: 500px;
+    height: 200px;
+    background-color: var(--color-surface-300);
+    color: var(--color-text-100);
+    border-radius: 10px;
+    display: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:20px;
+}
+
+.cardicon {
+    padding-top:20px;
+    margin-bottom: 20px;
+}
+
+.cardbutton {
+    margin: auto;
+    padding: 10px;
+    background-color: var(--color-primary-100);
+    color: var(--color-text-100);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cardtext {
+    width: 50dvw;
+    height: 50dvh;
+    background-color: var(--color-surface-200);
+    color: var(--color-text-100);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:20px;
+    padding: 20;
+    font-size: 1.5rem;
+}
+
+.cardbutton:hover {
+    background-color: var(--color-primary-200);
+}
+
+.wrapper {
+    margin: 20px;
+    text-align: center;
+  }

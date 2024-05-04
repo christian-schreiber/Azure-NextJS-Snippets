@@ -1,0 +1,38 @@
+{
+  "name": "next-azure-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.0.0",
+    "@azure/identity": "^4.2.0",
+    "@azure/keyvault-secrets": "^4.8.0",
+    "@azure/storage-blob": "^12.17.0",
+    "highlight.js": "^11.9.0",
+    "next": "14.2.3",
+    "next-auth": "^4.24.7",
+    "nookies": "^2.5.2",
+    "qrcode": "^1.5.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
+    "react-icons": "^5.2.0",
+    "react-markdown": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "18.3.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "^9.1.0"
+  },
+  "engines": {
+    "node": "18.2.0"
+  }
+}

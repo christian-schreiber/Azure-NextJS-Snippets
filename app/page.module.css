@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+}
+
+.button {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  background-color: var(--color-primary-100);
+  color: var(--color-text-100);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
