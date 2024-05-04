@@ -6,6 +6,14 @@ on:
       - main
   workflow_dispatch:
 
+env: 
+  AZURE_KEYVAULT_URL: https://nextazurekeyvault.vault.azure.net
+  AZURE_AD_CLIENT_ID: a450ff51-6cde-4380-96c2-f841b2d0a484
+  AZURE_AD_CLIENT_SECRET: j5T8Q~4gh6Dlb5Dw6zTYXu0_Owia_I3bcQCK4b0Z
+  AZURE_AD_TENANT_ID: 630a260f-04bd-4d65-a04d-f922f6c2c4a0
+  NEXTAUTH_URL: http://localhost:3000
+  NEXTAUTH_SECRET: aSZqZOMKZofVdYdCoD+IjSZ75RD92VbciuBLxAKj/3I=
+
 jobs:
   build:
     runs-on: windows-latest
