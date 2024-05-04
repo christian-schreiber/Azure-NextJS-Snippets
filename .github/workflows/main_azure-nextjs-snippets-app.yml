@@ -1,7 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy Node.js app to Azure Web App - Azure-NextJS-Snippets-App
+name: Azure-NextJS-Snippets-App
 
 on:
   push:
@@ -16,22 +13,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20.x'
 
-      - name: npm install, build, and test
+      - name: Install packages and build
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
-      
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+          npm run build
+
+      - name: Frontend Zip Release
+        uses: TheDoctor0/zip-release@0.7.6
+        with:
+          filename: Release.zip
+          path: ./build/*
+
+      - name: Frontend Upload release artifact for deployment
+        uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .
+          path: Release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,10 +49,10 @@ jobs:
           name: node-app
       
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'Azure-NextJS-Snippets-App'
           slot-name: 'Production'
-          package: .
+          package: Release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5EF4E99819B44D3594DC6B02C1A32E6D }}
