@@ -4,7 +4,7 @@ import styles from "./qrcodecard.module.css";
 import { useState } from 'react';
 import { IoQrCodeOutline } from "react-icons/io5";
 
-const API_URL = "http://localhost:3000/api/qrcode";
+const API_URL =  process.env.NEXTAUTH_URL + "/api/qrcode";
 
 const QRCodecard = () => {
     const [inputText, setInputText] = useState('');
