@@ -1,0 +1,21 @@
+.cardtext {
+    width: 50dvw;
+    height: auto;
+    background-color: var(--color-surface-200);
+    color: var(--color-text-100);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top:20px;
+    font-size: 1.5rem;
+    padding: 20px;
+    
+}
+
+.element {
+    margin-bottom: 20px;
+  }
+
+.wrapper {
+    margin: 20px;
+    text-align: left;    
+  }
