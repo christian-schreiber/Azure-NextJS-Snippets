@@ -5,10 +5,9 @@ import { getServerSession } from "next-auth/next";
 
 export default async function Home() {
   const session = await getServerSession(options)
-  const data = await getServerSession()
+
   return (
-    <main className={styles.main}>
-      
+    <main className={styles.main}>      
       <h1>Next-Azure-App</h1>      
       {session ? (
           <>
@@ -21,7 +20,7 @@ export default async function Home() {
           </Link>
           </>
         ) :
-        <Link href="http://localhost:3000/api/auth/signin">
+        <Link href="/api/auth/signin">
             <button className={styles.button}>Login</button>
         </Link>
       }     

@@ -4,15 +4,13 @@ import styles from "./qrcodecard.module.css";
 import { useState } from 'react';
 import { IoQrCodeOutline } from "react-icons/io5";
 
-const API_URL = "http://localhost:3000/api/qrcode";
-
 const QRCodecard = () => {
     const [inputText, setInputText] = useState('');
     const [result, setResult] = useState(null);
 
     const handleSend = async (event) => {
         event.preventDefault();
-        const response = await fetch(API_URL, {
+        const response = await fetch("/api/qrcode", {
             method: 'POST',
             body: JSON.stringify(inputText),
         });

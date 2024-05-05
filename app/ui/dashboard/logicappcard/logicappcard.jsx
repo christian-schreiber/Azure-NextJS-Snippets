@@ -4,8 +4,6 @@ import { useState } from 'react';
 import styles from "./logicappcard.module.css";
 import Image from 'next/image';
 
-const API_URL = "http://localhost:3000/api/logicapp";
-
 const Logicappcard = () => {
     const [result, setResult] = useState(null);
 
@@ -13,7 +11,7 @@ const Logicappcard = () => {
         console.log("Call Logic App");
 
         try {
-            const response = await fetch(API_URL, {
+            const response = await fetch("/api/logicapp", {
                 method: 'GET',
             });
 

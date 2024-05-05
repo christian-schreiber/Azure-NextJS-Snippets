@@ -26,9 +26,7 @@ const Dropzone = () => {
             formData.append("file", file);
         });
 
-        const uploadurl =  "http://localhost:3000/api/upload";
-
-        fetch(uploadurl, {
+        fetch("/api/upload", {
             method: 'PUT',
             body: formData,
         })

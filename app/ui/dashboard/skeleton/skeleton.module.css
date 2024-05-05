@@ -1,0 +1,97 @@
+.skeleton {
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeletontitel {
+    opacity: .1;
+}
+
+.skeletontext {
+    width: 100%;
+    height: .5rem;
+    margin-bottom: .25rem;
+    border-radius: .125rem;
+}
+
+.skeletonimage {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.skeleton-text:last-child {
+    width: 80%;
+    margin-bottom: 0;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: var(--color-surface-200, 20%, 70%);
+    }
+    100% {
+        background-color: var(--color-surface-300, 20%, 95%);
+    }
+}
+
+.box {
+    position: relative;
+    width: 525px;
+    height: 300px;
+    margin-bottom: 60px;
+    margin-top:20px;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #999999, #666666, #CCCCCC, #F0F0F0, #CCCCCC, #666666, #999999);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #999999, #666666, #CCCCCC, #F0F0F0, #CCCCCC, #666666, #999999);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+    filter: blur(10px);
+    opacity: 0.75;
+}
+
+.box span {
+    position: absolute;
+    inset: 1px;
+    background: var(--color-surface-200);
+    border-radius: 20px;
+    z-index: 1;
+    padding:20px;
+}
+
+.box span:hover {
+    background-color: var(--color-surface-300);
+    cursor: pointer;
+}
+
+.boximage {
+    margin-top: 20px;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+
+    }
+    100% {
+        --a: 360deg;        
+    }
+}

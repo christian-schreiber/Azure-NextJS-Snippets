@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href="/dashboard/qrcode">QR Code</Link>
         <Link href="/dashboard/upload">Upload</Link>
         <Link href="/dashboard/logicapp">Logic App</Link>
-        <Link href="http://localhost:3000/api/auth/signout?callbackUrl=/">Logout</Link>
+        <Link href="/api/auth/signout?callbackUrl=/">Logout</Link>
       </div>
     </div>
   );

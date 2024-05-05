@@ -4,28 +4,35 @@ import { useState, useEffect } from 'react';
 import styles from "./cosmosdbcard.module.css";
 import Link from 'next/link';
 import Image from 'next/image';
-
-const API_URL = "http://localhost:3000/api/cosmosdb";
+import Skeleton from '../skeleton/skeleton';
 
 const Cosmosdbcard = () => {
     const [result, setResult] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(API_URL, {
+            const response = await fetch("/api/cosmosdb", {
                 method: 'GET',
             });
 
             const data = await response.json();
             setResult(data);
+            setIsLoading(false);
         };
-
-        fetchData();
+        fetchData();        
     }, []);
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.boxContainer}>
+                
+                {Array(8).fill().map((_, index) => (
+                    <div key={index} className={styles.boxContainer} style={{display: isLoading ? 'block' : 'none'}}>
+                        <Skeleton />
+                    </div>
+                ))}
+
                 {result && result.resources.map((snippet) => (
                     <Link href={`/dashboard/${snippet.id}`}>
                         <div key={snippet.id} className={styles.box}>
