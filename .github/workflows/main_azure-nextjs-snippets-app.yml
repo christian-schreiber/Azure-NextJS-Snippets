@@ -59,7 +59,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'Azure-Web-App'
+          app-name: 'Azure-NextJS-Snippets-App'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F1FE96D4239461EA3AE072C7ABA3D9D }}
           package: Release.zip
