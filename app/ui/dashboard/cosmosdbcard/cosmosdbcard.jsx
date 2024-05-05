@@ -20,7 +20,7 @@ const Cosmosdbcard = () => {
             setResult(data);
             setIsLoading(false);
         };
-        fetchData();        
+        fetchData();    
     }, []);
 
     return (
@@ -32,9 +32,8 @@ const Cosmosdbcard = () => {
                         <Skeleton />
                     </div>
                 ))}
-
                 {result && result.resources.map((snippet) => (
-                    <Link href={`/dashboard/${snippet.id}`}>
+                    <Link key={snippet.id} href={`/dashboard/snippets/${snippet.snippetname}?id=${snippet.id}`}>
                         <div key={snippet.id} className={styles.box}>
                             <span>
                             <h2>{snippet.snippetname}</h2>
@@ -48,11 +47,12 @@ const Cosmosdbcard = () => {
                                     width={100}
                                     height={100}
                                     alt="Snippet Icon"
+                                    loading="eager"
                                 />
                             </section>
                             </span>
                         </div>
-                    </Link>
+                    </Link>                
                 ))}
             </div>
         </div>

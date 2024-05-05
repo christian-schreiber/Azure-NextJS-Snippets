@@ -4,7 +4,7 @@ import styles from "./navbar.module.css";
 import Link from "next/link";
 
 const Navbar = () => {
-  const pathname = usePathname();
+  const pathname = decodeURIComponent(usePathname());
 
   return (
     <div className={styles.container}>
