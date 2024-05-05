@@ -1,4 +1,4 @@
-//import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 //import fetch from 'node-fetch';
 
 //import { SecretClient } from '@azure/keyvault-secrets';
@@ -20,5 +20,5 @@ export async function GET() {
 //
     //const data = await response.text();
     //return NextResponse.json(data);
-    return null;
+    return NextResponse.json({ message: 'Hello from the API!' });
 }
