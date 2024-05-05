@@ -30,6 +30,12 @@ jobs:
           AZURE_AD_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
           NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
 
+      - name: Print working directory
+        run: pwd
+        
+      - name: List files in working directory
+        run: ls -l
+
       - name: Frontend Zip Release
         uses: TheDoctor0/zip-release@0.7.6
         with:
