@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/de1f3d9c-1245-440a-a1ed-ec7c580a299e/resourceGroups/Azure-NextJS-Snippets/providers/Microsoft.Web/sites/Azure-NextJS-Snippets-App",
+    "appService.deploySubpath": "."
+}

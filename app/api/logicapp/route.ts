@@ -8,8 +8,7 @@ export async function GET() {
 
     const credential = new DefaultAzureCredential();
 
-    //const url = process.env.AZURE_KEYVAULT_URL as string;
-    const url = "https://nextazurekeyvault.vault.azure.net";
+    const url = process.env.AZURE_KEYVAULT_URL as string;
 
     const client = new SecretClient(url, credential);
 
