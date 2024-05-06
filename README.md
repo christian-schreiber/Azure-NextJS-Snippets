@@ -69,11 +69,18 @@ jobs:
           npm install
           npm run build
 
+        env:
+          AZURE_KEYVAULT_URL: ${{ secrets.AZURE_KEYVAULT_URL }}
+          AZURE_AD_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+          AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+          AZURE_AD_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+
       - name: Frontend Zip Release
         uses: TheDoctor0/zip-release@0.7.6
         with:
           filename: Release.zip
-          path: ./build/*
+          path: .
 
       - name: Frontend Upload release artifact for deployment
         uses: actions/upload-artifact@v4
@@ -98,9 +105,9 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'Azure-Web-App'
+          app-name: 'Azure-NextJS-Snippets-App'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_Insert_Your_Profile_here }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_Your_Profile_ }}
           package: Release.zip
 
 ```
